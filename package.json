@@ -1,5 +1,5 @@
 {
-  "name": "angular-quickstart",
+  "name": "angular-emarket",
   "version": "1.0.0",
   "scripts": {
     "start": "concurrent \"npm run tsc:w\" \"npm run lite\" ",
