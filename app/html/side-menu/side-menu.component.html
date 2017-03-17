@@ -1,0 +1,15 @@
+
+        <div class="col-lg-2">
+            <nav class="nav-sidebar">
+                <ul class="nav">
+                    
+                    <li *ngFor="let category of categories">
+                        <a href="javascript:;">
+                            {{ category.name }}
+                            <span class="badge pull-right"> {{ category.count }}</span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </nav>
+        </div>        
