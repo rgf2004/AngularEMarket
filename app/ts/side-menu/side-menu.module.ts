@@ -3,11 +3,12 @@ import { CommonModule }  from '@angular/common';
 import { SideMenuComponent }   from './side-menu.component';
 
 
-import { CategoriesProvider } from './categories-provider.service';
+import { CategoriesProvider }   from './categories-provider.service';
+import { ContentDivComponent }  from '../content-div/content-div.component';
 
 @NgModule({
     imports : [
-        CommonModule, 
+        CommonModule
     ],
     declarations : [
         SideMenuComponent
@@ -15,7 +16,7 @@ import { CategoriesProvider } from './categories-provider.service';
     exports : [
         SideMenuComponent
     ],
-    providers: [CategoriesProvider]
+    providers: [CategoriesProvider, ContentDivComponent]
 })
 
 export class SideMenuModule { }

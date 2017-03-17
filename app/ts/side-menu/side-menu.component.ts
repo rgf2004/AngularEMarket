@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';  
+import { Component }            from '@angular/core';  
 
-import { CategoriesProvider } from './categories-provider.service';
+import { CategoriesProvider }   from './categories-provider.service';
+
+import { ContentDivComponent }  from '../content-div/content-div.component';
 
 @Component({
   selector: 'side-menu',
@@ -10,9 +12,18 @@ import { CategoriesProvider } from './categories-provider.service';
 export class SideMenuComponent {
 
   categories ;
+  message;
 
-  constructor(private _categoriesProvider : CategoriesProvider){
+  constructor(private _categoriesProvider : CategoriesProvider, private _contentDivComponent : ContentDivComponent){
       this.categories = _categoriesProvider.getCategories();
+  }
+
+  categoryClicked(categoryName)
+  {
+
+    this.message = categoryName;
+
+    //this._contentDivComponent.renderContent(categoryName);
   }
 
 }

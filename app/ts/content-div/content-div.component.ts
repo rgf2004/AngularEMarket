@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
 
 export class ContentDivComponent
 {
-  message : string ;
+  
+  message : string = "Hello" ;
+
+  renderContent(_message)
+  {
+    console.log(this);
+    this.message = _message;
+    console.log(this.message);
+  }
 }

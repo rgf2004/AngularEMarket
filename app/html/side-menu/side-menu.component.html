@@ -4,7 +4,7 @@
                 <ul class="nav">
                     
                     <li *ngFor="let category of categories">
-                        <a href="javascript:;">
+                        <a (click)="categoryClicked(category.name)">
                             {{ category.name }}
                             <span class="badge pull-right"> {{ category.count }}</span>
                         </a>
@@ -12,4 +12,10 @@
                     
                 </ul>
             </nav>
-        </div>        
+        </div>    
+
+        <div class="col-lg-8">
+
+            <h2 [innerHtml]=" message "></h2>
+
+        </div>    
