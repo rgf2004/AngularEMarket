@@ -1,0 +1,21 @@
+
+        <div class="col-lg-2">
+            <nav class="nav-sidebar">
+                <ul class="nav">
+                    
+                    <li *ngFor="let category of categories">
+                        <a (click)="categoryClicked(category.name)">
+                            {{ category.name }}
+                            <span class="badge pull-right"> {{ category.count }}</span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </nav>
+        </div>    
+
+        <div class="col-lg-8">
+
+            <h2 [innerHtml]=" message "></h2>
+
+        </div>    
